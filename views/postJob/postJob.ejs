@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-center text-light">Post a new job</h1>
+    <form class="text-light form-inline" action="/postjob" method="post">
+      <div class="">
+        <select
+          name="jobcategory"
+          class="custom-select my-1 mr-sm-2"
+          id="inlineFormCustomSelectPref"
+        >
+          <option selected>select job category</option>
+          <option value="Tech">Tech</option>
+          <option value="Non-Tech">Non-Tech</option>
+        </select>
+      </div>
+      <div class="mb-3 col-sm">
+        <select
+          name="jobdesignation"
+          class="custom-select my-1 mr-sm-2"
+          id="inlineFormCustomSelectPref"
+        >
+          <option selected>select job designation</option>
+          <option value="HR">HR</option>
+          <option value="SDE">SDE</option>
+          <option value="DevOps">DevOps</option>
+          <option value="MERN Developer">MERN Developer</option>
+          <option value="MEAN Developer">MEAN Developer</option>
+          <option value="JAVA Developer">JAVA Developer</option>
+          <option value="Front-End Developer">Front-End Developer</option>
+          <option value="Back-End Developer">Back-End Developer</option>
+          <option value="Full-Stack Developer">Full-Stack Developer</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputLocation1" class="form-label"
+          >Enter job location</label
+        >
+        <input type="text" name="joblocation" class="form-control" id="exampleInputLocation1" />
+      </div>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend"
+            >Company Name</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustomUsername"
+          name="companyname"
+          placeholder=""
+          aria-describedby="inputGroupPrepend"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <input type="text" name="salary" placeholder="enter salary" />
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend"
+            >Total Positions</span
+          >
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustomUsername"
+          name="numberofopenings"
+          placeholder=""
+          aria-describedby="inputGroupPrepend"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <select name="skillsrequired" class="custom-select" multiple>
+          <option selected>Open this select menu</option>
+          <option value="React">React</option>
+          <option value="NodeJs">NodeJs</option>
+          <option value="Angular">Angular</option>
+          <option value="Java">Java</option>
+          <option value="Express">Express</option>
+          <option value="MongoDB">MongoDB</option>
+          <option value="JS">JS</option>
+          <option value="SQL">SQL</option>
+          <option value="AWS">AWS</option>
+        </select>
+
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">Apply By</span>
+        </div>
+        <input
+          type="date"
+          class="form-control"
+          id="validationCustomUsername"
+          placeholder=""
+          name="applyby"
+          aria-describedby="inputGroupPrepend"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

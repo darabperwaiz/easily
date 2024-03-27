@@ -1,0 +1,53 @@
+<div class="container container-sm container-md ">
+  <div class="row align-items-center">
+    <div class="col col-lg order-last">
+      <h1>A comprehensive platform for reliable</h1>
+      <h4>job opportunities and internships</h4>
+      <p>Get Discovered. Get Hired</p>
+      <div class="landing-page-btn">
+        <a href="/jobs"
+          ><button class="btn btn-primary">I'm A Job Seeker</button></a
+        >
+        <!-- <button class="btn btn-danger"></button> -->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Experience Easily</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <%- include('../partials/register'); %>
+              </div>
+              <div class="modal-footer">
+                Already registered?
+                <button class="btn border border-success text-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Experience Easily</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <%- include('../partials/login'); %>
+              </div>
+              <div class="modal-footer">
+                Create account?
+                <button class="btn border border-success text-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">I'm a Recruiter</button>
+      </div>
+    </div>
+    <div class="col order-first">
+      <img class="img-fluid border-0 img-thumbnail" src="images/banner.png" alt="" />
+    </div>
+  </div>
+</div>

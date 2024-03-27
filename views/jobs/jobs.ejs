@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row g-5">
+    <% jobs.forEach((job, index)=> {%>
+      <div class="col ">
+        <div class="card border border-light" >
+          <div class="card-body">
+            <p class="text-light" style="width: max-content;">Actively hiring <i class="bi bi-graph-up-arrow text-warning"></i></p>
+            <p class="text-warning"><%= job.companyname%></p>
+            <p class="text-light"><%= job.jobcategory%> <span class="text-info"><%= job.jobdesignation%></span></p>
+            <p class="text-light"><i class="bi bi-geo-alt-fill "></i> <%= job.joblocation%></p>
+            <p class="text-light"><i class="bi bi-currency-rupee"></i> <%= job.salary%></p>
+            <div class="row card-flex g-2">
+             <% job.skillsrequired.forEach((skill)=> {%>
+              <span class="btn maxContent btn-outline-info btn-sm col m-1"><%= skill%></span>
+              <%})%>  
+              <a href="/jobs/<%= job.id %>" class="btn btn-outline-success">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%})%>
+  </div>
+</div>

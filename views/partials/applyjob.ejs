@@ -1,0 +1,53 @@
+<form action="/applyjob" method="post" enctype="multipart/form-data">
+  <h4 class="text-center">apply in less than 1 minute</h4>
+  <input type="hidden" value="<%= job.id%>" name="jobId">
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Name</div>
+    </div>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="inlineFormInputGroupUsername2"
+      placeholder="enter your name"
+    />
+  </div>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Email</div>
+    </div>
+    <input
+      type="text"
+      name="email"
+      class="form-control"
+      id="inlineFormInputGroupUsername2"
+      placeholder="enter your email"
+    />
+  </div>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Contact</div>
+    </div>
+    <input
+      type="text"
+      name="contact"
+      class="form-control"
+      id="inlineFormInputGroupUsername2"
+      placeholder="+91 ____ __ ____"
+    />
+  </div>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Resume</div>
+    </div>
+    <input
+      type="file"
+      name="resumepath"
+      class="form-control"
+      accept=".pdf, .docx, .doc"
+      id="inlineFormInputGroupUsername2"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

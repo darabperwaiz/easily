@@ -1,0 +1,89 @@
+<div class="container border">
+  <div class="row">
+    <img src="https://files.codingninjas.com/web-banner-28759.png" alt="" />
+  </div>
+  <div class="row p-3">
+    <p
+      class="text-success text-center"
+      style="font-size: 40px; font-weight: 300"
+    >
+      <span class="text-danger"><%= job.jobdesignation%></span> oppertunity in
+      <span><%= job.joblocation%></span> at
+      <span class="text-info"><%= job.companyname%></span>
+    </p>
+    <p style="margin-bottom: 0"><%= job.companyname%></p>
+    <p style="margin-bottom: 0"><%= job.jobcategory%> <span class="text-success"><%= job.jobdesignation %></span></p>
+    <div class="gx-5 gy-2" style="margin-bottom: 10px">
+      <p style="margin-bottom: 0">
+        <i class="bi bi-geo"></i> <%= job.joblocation%>
+      </p>
+      <p style="margin-bottom: 0">
+        <i class="bi bi-currency-rupee"></i> <%= job.salary%>
+      </p>
+      <p style="margin-bottom: 0">
+        <i class="bi bi-hourglass-split"></i> Apply By <%= job.applyby %>
+      </p>
+      <p style="margin-bottom: 0">
+        <i class="bi bi-bar-chart-fill"></i> Number of openings <span><%= job.numberofopenings %></span> 
+      </p>
+      <a href="/jobs/applicants/<%= job.id%>" class="text-danger" style="margin-bottom: 0">
+        <i class="bi bi-people-fill"></i> 
+        Applicants
+        <%if(job.applicants== undefined) {%>
+          <span></span>
+        <%} else {%>
+          <%if(job.applicants.length> 0) {%>
+            <%= job.applicants.length%>
+          <%}%>
+          
+        <%}%>
+      </a>
+      <div class="row g-2" style=" margin-top: 10px">
+       <% job.skillsrequired.forEach((skill)=> {%>
+        <span class="btn btn-outline-info btn-sm col m-1" style="max-width: max-content;"><%= skill%></span>
+       <% })%>
+      </div>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Apply Now
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Easily</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <%- include('../partials/applyjob'); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="text-light bg-success rounded"
+      style="width: max-content; font-weight: 300"
+    >
+      Posted: <%= job.jobposted %>
+    </p>
+  </div>
+</div>
